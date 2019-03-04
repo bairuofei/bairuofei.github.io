@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="bonjour,mdns," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local. 两个协议： mDNS设备通过组播的方式交互DNS记录来完成域名解析。只能用于局域网内部，只接受">
-<meta name="keywords" content="��¼���">
+<meta name="description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local.">
+<meta name="keywords" content="bonjour,mdns">
 <meta property="og:type" content="article">
 <meta property="og:title" content="局域网设备发现">
 <meta property="og:url" content="http://yoursite.com/2018/11/20/局域网设备发现/index.html">
 <meta property="og:site_name" content="Buffa">
-<meta property="og:description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local. 两个协议： mDNS设备通过组播的方式交互DNS记录来完成域名解析。只能用于局域网内部，只接受">
+<meta property="og:description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-21T02:12:01.344Z">
+<meta property="og:updated_time" content="2019-03-04T08:27:28.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="局域网设备发现">
-<meta name="twitter:description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local. 两个协议： mDNS设备通过组播的方式交互DNS记录来完成域名解析。只能用于局域网内部，只接受">
+<meta name="twitter:description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local.">
 
 
 
@@ -305,6 +305,8 @@
           
 
           
+            
+          
 
           
           
@@ -322,6 +324,37 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -342,6 +375,7 @@
         <p>Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">名称.服务类型.传输协议类型.local.</span><br></pre></td></tr></table></figure></p>
 <p>比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DamonWebServer._http._tcp.local.</span><br></pre></td></tr></table></figure></p>
 <p>又比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DummiesWebServer._http._tcp.local.</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h1 id="两个协议："><a href="#两个协议：" class="headerlink" title="两个协议："></a>两个协议：</h1><ul>
 <li><p>mDNS<br>设备通过组播的方式交互DNS记录来完成域名解析。<br>只能用于局域网内部，只接受解析主机名前缀为.local的域名<br>mDNS还可以在零配置网络中自行分配域名，自行分配后通过组播记录类型为”any”的mDNS包来检查重名<br><br>约定组播地址是：224.0.0.251，端口号：5353<br><br><br>组播查询：a.local地址<br>组播回复：a.local  ip    #DNS中的A类记录</p>
 </li>
@@ -388,6 +422,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/bonjour/" rel="tag"># bonjour</a>
+          
+            <a href="/tags/mdns/" rel="tag"># mdns</a>
+          
+        </div>
+      
 
       
       
@@ -397,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/20/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/11/20/hello-world/" rel="next" title="How to Construct a Hexo Blog">
+                <i class="fa fa-chevron-left"></i> How to Construct a Hexo Blog
               </a>
             
           </div>
@@ -438,6 +480,15 @@
 
           
 
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80Mjk4MS8xOTUyNw=="></div>
+    </div>
+
+  
+
+
+
         </div>
         
           
@@ -472,7 +523,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Buffa</p>
-              <p class="site-description motion-element" itemprop="description">buffa�ĸ��˲���</p>
+              <p class="site-description motion-element" itemprop="description">buffa's blog</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -495,7 +546,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -570,6 +621,15 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Buffa</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
   
 </div>
 
@@ -715,6 +775,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
