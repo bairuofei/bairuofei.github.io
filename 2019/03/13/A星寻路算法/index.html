@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="bolg,Hexo," />
+  <meta name="keywords" content="寻路算法,A*," />
 
 
 
@@ -79,18 +79,26 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. How t">
-<meta name="keywords" content="bolg,Hexo">
+<meta name="description" content="A*寻路算法参考博客    由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。    为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。 划分区域正如上图中所示，我们首先将搜索区域划分为方格网络，以此简化搜索区域。通过计算从绿格到红格需要走哪些方格">
+<meta name="keywords" content="寻路算法,A*">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to Construct a Hexo Blog">
-<meta property="og:url" content="http://yoursite.com/2018/11/20/hello-world/index.html">
+<meta property="og:title" content="A*算法">
+<meta property="og:url" content="http://yoursite.com/2019/03/13/A星寻路算法/index.html">
 <meta property="og:site_name" content="Buffa">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. How t">
+<meta property="og:description" content="A*寻路算法参考博客    由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。    为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。 划分区域正如上图中所示，我们首先将搜索区域划分为方格网络，以此简化搜索区域。通过计算从绿格到红格需要走哪些方格">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-04T08:28:35.138Z">
+<meta property="og:image" content="http://yoursite.com/images/AS2.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AS3.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AS1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AS4.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AS5.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AS6.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AS7.jpg">
+<meta property="og:updated_time" content="2019-03-13T14:04:43.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to Construct a Hexo Blog">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. How t">
+<meta name="twitter:title" content="A*算法">
+<meta name="twitter:description" content="A*寻路算法参考博客    由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。    为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。 划分区域正如上图中所示，我们首先将搜索区域划分为方格网络，以此简化搜索区域。通过计算从绿格到红格需要走哪些方格">
+<meta name="twitter:image" content="http://yoursite.com/images/AS2.jpg">
 
 
 
@@ -120,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/20/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/03/13/A星寻路算法/"/>
 
 
 
 
 
-  <title>How to Construct a Hexo Blog | Buffa</title>
+  <title>A*算法 | Buffa</title>
   
 
 
@@ -263,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/A星寻路算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Buffa">
@@ -280,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">How to Construct a Hexo Blog</h1>
+          <h1 class="post-title" itemprop="name headline">A*算法</h1>
         
 
         <div class="post-meta">
@@ -292,8 +300,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-20T22:52:56+08:00">
-                2018-11-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-13T22:23:57+08:00">
+                2019-03-13
               </time>
             
 
@@ -310,7 +318,7 @@
 
           
           
-             <span id="/2018/11/20/hello-world/" class="leancloud_visitors" data-flag-title="How to Construct a Hexo Blog">
+             <span id="/2019/03/13/A星寻路算法/" class="leancloud_visitors" data-flag-title="A*算法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,7 +343,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  208
+                  1.7k
                 </span>
               
 
@@ -351,7 +359,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  5
                 </span>
               
             </div>
@@ -372,27 +380,50 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="How-to-Construct-a-Blog"><a href="#How-to-Construct-a-Blog" class="headerlink" title="How to Construct a Blog"></a>How to Construct a Blog</h2><ul>
-<li><a href="https://my.oschina.net/ryaneLee/blog/638440" target="_blank" rel="noopener">搭建步骤指南</a><br></li>
-<li><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">hexo教程</a><br><a id="more"></a>
-</li>
+        <h1 id="A-寻路算法"><a href="#A-寻路算法" class="headerlink" title="A*寻路算法"></a>A*寻路算法</h1><p><a href="https://blog.csdn.net/hitwhylz/article/details/23089415" target="_blank" rel="noopener">参考博客</a>  </p>
+<blockquote>
+<p>由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。  </p>
+</blockquote>
+<p>为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。<br><img src="/images/AS2.jpg" alt="" title="寻路问题示例"></p>
+<h2 id="划分区域"><a href="#划分区域" class="headerlink" title="划分区域"></a>划分区域</h2><p>正如上图中所示，我们首先将搜索区域划分为方格网络，以此简化搜索区域。通过计算从绿格到红格需要走哪些方格，我们就找到了路径。</p>
+<p>更抽象一点，我们可将搜索区域内的每个方格看为一个待选节点，i通过选择合适的节点访问顺序就可以得到对应的实际路径。因此我们不仅可以将区域划分为方格，也可以划分为其它任何形状，但我们最终解决的是抽象出来的节点路径问题。</p>
+<h2 id="开始搜索"><a href="#开始搜索" class="headerlink" title="开始搜索"></a>开始搜索</h2><p>首先介绍一些A*算法需要的准备工作。  </p>
+<ol>
+<li>需要维护一个Openlist（开放列表），其中存放待考察的节点。一开始列表中只有起点节点，随后会加入其它待考察的节点；</li>
+<li>需要维护一个closelist（封闭列表），其中存放不再需要考虑的节点。随着搜索的进行，不断有节点加入到closelist中；</li>
+</ol>
+<p>算法开始后，openlist中只有起始节点A，查看与起点相邻的方格，将其中可走或可达的方格也加入到openlist中。同时将A设为这些新加入方格的父节点，我们将在最后的路径追踪中用到这些节点关系。</p>
+<p>如下图所示，绿格为起点，其外框为亮蓝色，表明这个方格被加入了closelist。外围与其相邻的黑色方格是需要被检查的，其外框为亮绿色。每个黑方格有一个灰色指针指向它们的父节点，此处即为节点A。<br><img src="/images/AS3.jpg" alt=""></p>
+<p>下面我们需要从openlist中的待选节点中，选择一个节点作为路径组成部分。因此需要对待选节点建立评判标准，即为下面的路径排序。</p>
+<h2 id="路径排序"><a href="#路径排序" class="headerlink" title="路径排序"></a>路径排序</h2><p>计算路径成本值需要利用下面公式：<br>$$ F=G+H $$<br>其中，<br>$G$：从起点A移动到指定方格的移动代价。本例中我们假设水平或竖直方向的单位移动代价为10，对角方向的单位移动成本为14，是水平移动代价的$\sqrt{2}$倍。<br>$H$：从指定方格移动到终点B的估算成本。这个成本值只是一种估算，因为途中可能会有其它障碍物。这里我们使用曼哈顿距离（街区数）来计算H，当然也可能有其它的计算方式。  </p>
+<p>上述二者相加便得到了待考察节点的成本值。我们将其标在图上，左上角是$F$，左下角是$G$，右下角是$H$。</p>
+<p><img src="/images/AS1.jpg" alt=""></p>
+<p>如图完成对openlist中的所有节点的成本值计算，以及父节点关系的标注，下面开始考察。</p>
+<h2 id="继续搜索"><a href="#继续搜索" class="headerlink" title="继续搜索"></a>继续搜索</h2><p>根据上述的成本值计算结果，我们从openlist中选择F值最小的节点，并将其从openlist中取出，放入closelist中，如图即为A点右边的节点，记为B。</p>
+<p><img src="/images/AS4.jpg" alt=""></p>
+<p>根据此轮选出的B点，继续像一开始时根据A点执行的操作一样，考察与B点相邻的节点，<code>注意忽略在closelist中或是不可走的节点</code>，比如A点和障碍点。若有不在openlist中的，则将其加入openlist。</p>
+<p>将B点设为新加入的方格的父亲（当前示例中没有新加入的方格，与B相邻的方格中，A点在closelist中，三个蓝色方格为障碍点，剩下四个方格已经在openlist中）。</p>
+<p>对B点相邻的节点进行考察时，有一些满足条件的节点已经处在openlist中（在考察A的相邻节点时加入的）。对这些节点，我们需要检查这条路径是否更优，即经由B点到达这些节点是否具有更小的G值。若没有，则不做任何操作；若G值更小，则将对应节点的父节点更改为当前选定节点B，并重新计算F值和G值。例如，上图中右上方的方格，若经由B点到达这个方格，则G=10+10=20，而G原来为14，修改路径后B并没有更小，所以不做处理。直观来看道理也显然。</p>
+<p>进行完上述考察后，我们需要继续选择下一个待处理方格。当前openlist中有七个方格，我们需要选择F值最小的。这次有两个方格的F值都是54 ，选哪个呢？没什么关系。从速度上考虑，选择最后加入openlist的方格更快。这导致了在寻路过程中，当靠近目标时，优先使用新找到的方格的偏好。但是这并不重要。(对相同数据的不同对待，导致两中版本的A*找到等长的不同路径)。</p>
+<p><img src="/images/AS5.jpg" alt=""></p>
+<p>下面的搜索过程与上面介绍的规则相同。需要注意的是，上图中的当前选中点C在计算相邻节点时，不会考虑右下方的方格，可以看成我们假设不能穿越墙角。</p>
+<p>后续的搜索过程如下图所示。 </p>
+<p><img src="/images/AS6.jpg" alt=""></p>
+<h2 id="确定路径"><a href="#确定路径" class="headerlink" title="确定路径"></a>确定路径</h2><p>经过上述搜索过程，我们对必要的节点进行了父子关系的标定。从终点开始，按照箭头的方向向父节点移动，会被带回起点，中间经过的节点就是我们所求的路径。</p>
+<p><img src="/images/AS7.jpg" alt=""></p>
+<h2 id="算法总结"><a href="#算法总结" class="headerlink" title="算法总结"></a>算法总结</h2><p>算法步骤如下：  </p>
+<ul>
+<li>把起点加入openlist，作为初始选定点  </li>
+<li>重复以下步骤：<ul>
+<li>将当前选定点移入closelist</li>
+<li>考察选定点的相邻节点，将其中不在closelist和openlist中的可达节点加入到openlist中，计算F=G+H；对已经在openlsit中的相邻节点，考察经由当前选定点是否具有更小的G值，若有则修改该点的父节点为当前选定点，否则不做处理。</li>
+<li>遍历openlist,查找F值最小的节点，把它作为当前要处理的节点，即当前选定点</li>
+<li>当终点加入到openlist，则此时路径已经找到；或者openlist中无终点且openlist为空，则路径不存在</li>
 </ul>
-<p>需要注意，进行主题设置时，采用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure></p>
-<p>进行文档更新时，采用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure></p>
-<p>主题相关设置在主题文件夹中的<code>_config.yml</code>中设置<br><br>网站内容相关设置在Hexo主目录的<code>_config.yml</code>中设置<br></p>
-<h2 id="How-to-Use-Hexo"><a href="#How-to-Use-Hexo" class="headerlink" title="How to Use Hexo"></a>How to Use Hexo</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="Deploy-a-new-post-to-remote-sites"><a href="#Deploy-a-new-post-to-remote-sites" class="headerlink" title="Deploy a new post to remote sites"></a>Deploy a new post to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
-<p>you can also realize it in two steps:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#生成</span></span><br><span class="line">$ hexo d <span class="comment">#部署</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Deploy-a-new-post-to-local-server"><a href="#Deploy-a-new-post-to-local-server" class="headerlink" title="Deploy a new post to local server"></a>Deploy a new post to local server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-<p>After that, you can view it on local server: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+</li>
+<li>保存路径。从从终点开始，每个方格沿着父节点移动直至起点，这就是所求路径。</li>
+</ul>
+<p><a href="https://www.cnblogs.com/q735613050/p/7253073.html" target="_blank" rel="noopener">Markdown中如何插入公式</a>  </p>
 
       
     </div>
@@ -410,9 +441,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bolg/" rel="tag"># bolg</a>
+            <a href="/tags/寻路算法/" rel="tag"># 寻路算法</a>
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/A/" rel="tag"># A*</a>
           
         </div>
       
@@ -425,8 +456,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/20/Welcome/" rel="next" title="Welcome to My Blog!">
-                <i class="fa fa-chevron-left"></i> Welcome to My Blog!
+              <a href="/2018/12/11/CS231N/" rel="next" title="CS231N">
+                <i class="fa fa-chevron-left"></i> CS231N
               </a>
             
           </div>
@@ -434,10 +465,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/20/局域网设备发现/" rel="prev" title="局域网设备发现">
-                局域网设备发现 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -590,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Construct-a-Blog"><span class="nav-number">1.</span> <span class="nav-text">How to Construct a Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-Hexo"><span class="nav-number">2.</span> <span class="nav-text">How to Use Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">2.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">2.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">2.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">2.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-a-new-post-to-remote-sites"><span class="nav-number">2.5.</span> <span class="nav-text">Deploy a new post to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-a-new-post-to-local-server"><span class="nav-number">2.6.</span> <span class="nav-text">Deploy a new post to local server</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-寻路算法"><span class="nav-number">1.</span> <span class="nav-text">A*寻路算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#划分区域"><span class="nav-number">1.1.</span> <span class="nav-text">划分区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搜索"><span class="nav-number">1.2.</span> <span class="nav-text">开始搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路径排序"><span class="nav-number">1.3.</span> <span class="nav-text">路径排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继续搜索"><span class="nav-number">1.4.</span> <span class="nav-text">继续搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确定路径"><span class="nav-number">1.5.</span> <span class="nav-text">确定路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法总结"><span class="nav-number">1.6.</span> <span class="nav-text">算法总结</span></a></li></ol></li></ol></div>
             
 
           </div>
