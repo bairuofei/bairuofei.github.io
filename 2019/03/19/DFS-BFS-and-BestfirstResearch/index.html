@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="BFS,DFS,best first," />
 
 
 
@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="All or nothing, now or never">
-<meta name="keywords" content="��¼���">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Buffa">
-<meta property="og:url" content="http://yoursite.com/tags/寻路算法/index.html">
+<meta name="description" content="Best first search最佳优先搜索属于一种有目的的搜索算法，它通过扩展根据指定规则选择的最有希望的节点来探索图。其中指定的规则代表着启发式的评估函数，评估方式可能取决于对节点的描述，目标的描述，搜索所收集到的信息等。 例如A*寻路算法就属于一种最佳优先算法，对待选节点进行评估函数的评估，以此决定下一步探索的节点。 Depth first search深度优先搜索属于盲目搜索。对于节点本">
+<meta name="keywords" content="BFS,DFS,best first">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DFS_BFS_and_BestfirstSearch">
+<meta property="og:url" content="http://yoursite.com/2019/03/19/DFS-BFS-and-BestfirstResearch/index.html">
 <meta property="og:site_name" content="Buffa">
-<meta property="og:description" content="All or nothing, now or never">
+<meta property="og:description" content="Best first search最佳优先搜索属于一种有目的的搜索算法，它通过扩展根据指定规则选择的最有希望的节点来探索图。其中指定的规则代表着启发式的评估函数，评估方式可能取决于对节点的描述，目标的描述，搜索所收集到的信息等。 例如A*寻路算法就属于一种最佳优先算法，对待选节点进行评估函数的评估，以此决定下一步探索的节点。 Depth first search深度优先搜索属于盲目搜索。对于节点本">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/DFS.PNG">
+<meta property="og:image" content="http://yoursite.com/images/DFS.PNG">
+<meta property="og:updated_time" content="2019-03-19T08:45:38.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Buffa">
-<meta name="twitter:description" content="All or nothing, now or never">
+<meta name="twitter:title" content="DFS_BFS_and_BestfirstSearch">
+<meta name="twitter:description" content="Best first search最佳优先搜索属于一种有目的的搜索算法，它通过扩展根据指定规则选择的最有希望的节点来探索图。其中指定的规则代表着启发式的评估函数，评估方式可能取决于对节点的描述，目标的描述，搜索所收集到的信息等。 例如A*寻路算法就属于一种最佳优先算法，对待选节点进行评估函数的评估，以此决定下一步探索的节点。 Depth first search深度优先搜索属于盲目搜索。对于节点本">
+<meta name="twitter:image" content="http://yoursite.com/images/DFS.PNG">
 
 
 
@@ -119,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/寻路算法/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/03/19/DFS-BFS-and-BestfirstResearch/"/>
 
 
 
 
 
-  <title>Tag: 寻路算法 | Buffa</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>DFS_BFS_and_BestfirstSearch | Buffa</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -144,7 +148,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,54 +252,214 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>寻路算法<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/DFS-BFS-and-BestfirstResearch/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buffa">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buffa">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/13/A星寻路算法/" itemprop="url">
-              
-                <span itemprop="name">A*算法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">DFS_BFS_and_BestfirstSearch</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-13T22:23:57+08:00"
-              content="2019-03-13" >
-          03-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-19T16:21:51+08:00">
+                2019-03-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/03/19/DFS-BFS-and-BestfirstResearch/" class="leancloud_visitors" data-flag-title="DFS_BFS_and_BestfirstSearch">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  484
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Best-first-search"><a href="#Best-first-search" class="headerlink" title="Best first search"></a>Best first search</h2><p>最佳优先搜索属于一种<code>有目的</code>的搜索算法，它通过扩展根据指定规则选择的最有希望的节点来探索图。其中指定的规则代表着启发式的评估函数，评估方式可能取决于对节点的描述，目标的描述，搜索所收集到的信息等。</p>
+<p>例如A*寻路算法就属于一种最佳优先算法，对待选节点进行评估函数的评估，以此决定下一步探索的节点。</p>
+<h2 id="Depth-first-search"><a href="#Depth-first-search" class="headerlink" title="Depth first search"></a>Depth first search</h2><p>深度优先搜索属于<code>盲目搜索</code>。对于节点本身只有结构上的评估，没有实际意义上的评估作用。DFS遍历图的算法步骤如下：</p>
+<ol>
+<li>访问顶点V</li>
+<li>依次从V的未被访问的邻接点出发，对图进行深度优先遍历；直至图中和V中有路径相通的顶点都被访问；</li>
+<li>若此时图中仍有节点未被访问，则选择一个未被访问的节点出发，重新进行深度优先遍历，直到图中所有节点均被访问过为止。</li>
+</ol>
+<p>例如下图：</p>
+<p><img src="/images/DFS.PNG" alt="" title="DFS示例"></p>
+<p>DFS搜索顺序为：1-&gt;2-&gt;4-&gt;8-&gt;5(返回到8，4，2，1)-&gt;3-&gt;6-&gt;7(返回6，3，1)</p>
+<h2 id="Breadth-first-search"><a href="#Breadth-first-search" class="headerlink" title="Breadth first search"></a>Breadth first search</h2><p>广度优先搜索也属于<code>盲目搜索</code>，算法步骤如下：</p>
+<ol>
+<li>将根节点放入队列中</li>
+<li>从队列中<code>取出</code>第一个节点，检查其是否为目标。若找到目标，则搜索结束并传回结果；否则将它所有尚未检验过的直接子节点加入到队列的末端</li>
+<li>若队列为空，表示搜索完整张图。结束搜索并传回未找到目标</li>
+<li>重复步骤2</li>
+</ol>
+<p>示例如图：</p>
+<p><img src="/images/DFS.PNG" alt="" title="BFS示例"></p>
+<p>搜索顺序为：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;7-&gt;8</p>
+<h2 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h2><p><a href="https://www.jianshu.com/p/b086986969e6" target="_blank" rel="noopener">原文博客</a><br><a href="https://en.wikipedia.org/wiki/Best-first_search" target="_blank" rel="noopener">wiki: best first search</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/BFS/" rel="tag"># BFS</a>
+          
+            <a href="/tags/DFS/" rel="tag"># DFS</a>
+          
+            <a href="/tags/best-first/" rel="tag"># best first</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/14/ADOPTT算法/" rel="next" title="ADOPTT算法">
+                <i class="fa fa-chevron-left"></i> ADOPTT算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -303,6 +467,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80Mjk4MS8xOTUyNw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -323,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -400,6 +582,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Best-first-search"><span class="nav-number">1.</span> <span class="nav-text">Best first search</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Depth-first-search"><span class="nav-number">2.</span> <span class="nav-text">Depth first search</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Breadth-first-search"><span class="nav-number">3.</span> <span class="nav-text">Breadth first search</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考内容"><span class="nav-number">4.</span> <span class="nav-text">参考内容</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -542,6 +740,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -570,6 +772,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
