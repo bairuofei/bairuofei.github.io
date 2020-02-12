@@ -189,7 +189,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #e0f0e9;
+  background: #fff;
 }
 @media (max-width: 767px) {
   body {
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e54e73;
+  background: #d618ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2607,7 +2607,7 @@ hr {
   margin-top: 80px;
 }
 .header {
-  background: #bbcdc5;
+  background: #f5f5f5;
 }
 .header-inner {
   padding: 25px 0 20px;
