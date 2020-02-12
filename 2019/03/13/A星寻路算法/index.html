@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="寻路算法,A*," />
+  <meta name="keywords" content="A*," />
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="A*寻路算法参考博客   由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。    为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。">
-<meta name="keywords" content="寻路算法,A*">
+<meta name="description" content="本文简单介绍基于A*的经典搜索算法。由于参考博客中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。">
+<meta name="keywords" content="A*">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A*算法">
 <meta property="og:url" content="http://yoursite.com/2019/03/13/A星寻路算法/index.html">
 <meta property="og:site_name" content="Buffa&#39;s Blog">
-<meta property="og:description" content="A*寻路算法参考博客   由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。    为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。">
+<meta property="og:description" content="本文简单介绍基于A*的经典搜索算法。由于参考博客中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。">
 <meta property="og:locale" content="algorithms">
 <meta property="og:image" content="http://yoursite.com/images/AS2.jpg">
 <meta property="og:image" content="http://yoursite.com/images/AS3.jpg">
@@ -94,10 +94,10 @@
 <meta property="og:image" content="http://yoursite.com/images/AS5.jpg">
 <meta property="og:image" content="http://yoursite.com/images/AS6.jpg">
 <meta property="og:image" content="http://yoursite.com/images/AS7.jpg">
-<meta property="og:updated_time" content="2019-03-13T14:32:01.240Z">
+<meta property="og:updated_time" content="2020-02-12T13:48:39.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A*算法">
-<meta name="twitter:description" content="A*寻路算法参考博客   由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。    为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。">
+<meta name="twitter:description" content="本文简单介绍基于A*的经典搜索算法。由于参考博客中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。">
 <meta name="twitter:image" content="http://yoursite.com/images/AS2.jpg">
 
 
@@ -369,12 +369,9 @@
       
 
       
-        <h1 id="A-寻路算法"><a href="#A-寻路算法" class="headerlink" title="A*寻路算法"></a>A*寻路算法</h1><p><a href="https://blog.csdn.net/hitwhylz/article/details/23089415" target="_blank" rel="noopener">参考博客</a> </p>
-<blockquote>
-<p>由于原文中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。  </p>
-</blockquote>
+        <p>本文简单介绍基于A*的经典搜索算法。由于参考博客中对于openlist和closelist的维护方式介绍的不太直观，同时这个算法也有一些易错点，故在此记录。<br><a id="more"></a> </p>
 <p>为简明起见，从一个简单寻路问题说起。如下图，图中绿格是起点，红格是终点，蓝格是障碍物，我们要从绿格走到红格，但是中间有一道蓝格的障碍物。  </p>
-<p><img src="/images/AS2.jpg" alt="" title="寻路问题示例"><br><a id="more"></a></p>
+<p><img src="/images/AS2.jpg" alt="" title="寻路问题示例"></p>
 <h2 id="划分区域"><a href="#划分区域" class="headerlink" title="划分区域"></a>划分区域</h2><p>正如上图中所示，我们首先将搜索区域划分为方格网络，以此简化搜索区域。通过计算从绿格到红格需要走哪些方格，我们就找到了路径。</p>
 <p>更抽象一点，我们可将搜索区域内的每个方格看为一个待选节点，i通过选择合适的节点访问顺序就可以得到对应的实际路径。因此我们不仅可以将区域划分为方格，也可以划分为其它任何形状，但我们最终解决的是抽象出来的节点路径问题。</p>
 <h2 id="开始搜索"><a href="#开始搜索" class="headerlink" title="开始搜索"></a>开始搜索</h2><p>首先介绍一些A*算法需要的准备工作。  </p>
@@ -414,6 +411,7 @@
 </li>
 <li>保存路径。从从终点开始，每个方格沿着父节点移动直至起点，这就是所求路径。</li>
 </ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/hitwhylz/article/details/23089415" target="_blank" rel="noopener">A星算法详解</a> </p>
 <p><a href="https://www.cnblogs.com/q735613050/p/7253073.html" target="_blank" rel="noopener">Markdown中如何插入公式</a>  </p>
 
       
@@ -432,8 +430,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/寻路算法/" rel="tag"># 寻路算法</a>
-          
             <a href="/tags/A/" rel="tag"># A*</a>
           
         </div>
@@ -447,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/11/CS231N/" rel="next" title="CS231N">
-                <i class="fa fa-chevron-left"></i> CS231N
+              <a href="/2018/11/21/getting_started/" rel="next" title="Gurobi Getting Started">
+                <i class="fa fa-chevron-left"></i> Gurobi Getting Started
               </a>
             
           </div>
@@ -457,8 +453,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/14/ADOPT算法/" rel="prev" title="ADOPT算法">
-                ADOPT算法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/19/DFS-BFS-and-BestfirstSearch/" rel="prev" title="DFS and BFS">
+                DFS and BFS <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -540,7 +536,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -562,7 +558,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -611,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-寻路算法"><span class="nav-number">1.</span> <span class="nav-text">A*寻路算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#划分区域"><span class="nav-number">1.1.</span> <span class="nav-text">划分区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搜索"><span class="nav-number">1.2.</span> <span class="nav-text">开始搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路径排序"><span class="nav-number">1.3.</span> <span class="nav-text">路径排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继续搜索"><span class="nav-number">1.4.</span> <span class="nav-text">继续搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确定路径"><span class="nav-number">1.5.</span> <span class="nav-text">确定路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法总结"><span class="nav-number">1.6.</span> <span class="nav-text">算法总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#划分区域"><span class="nav-number">1.</span> <span class="nav-text">划分区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搜索"><span class="nav-number">2.</span> <span class="nav-text">开始搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路径排序"><span class="nav-number">3.</span> <span class="nav-text">路径排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继续搜索"><span class="nav-number">4.</span> <span class="nav-text">继续搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确定路径"><span class="nav-number">5.</span> <span class="nav-text">确定路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法总结"><span class="nav-number">6.</span> <span class="nav-text">算法总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -650,7 +646,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">6.3k</span>
   
 </div>
 

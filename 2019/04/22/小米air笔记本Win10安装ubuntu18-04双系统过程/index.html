@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ubuntu,linux,小米,双系统," />
+  <meta name="keywords" content="ubuntu," />
 
 
 
@@ -79,22 +79,22 @@
 
 
 
-<meta name="description" content="因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结，整体流程不再赘述，主要参考博客列举如下（其中也有不少冗余步骤或者没有用到的步骤，我将在下面提到）：  Windows + Ubuntu 16.04 双系统安装详细教程 EFI引导如何在WIN10下安装Ubuntu18.04LTS双系统  设备参数：  小米air笔记本四核增强版 MX150独显">
-<meta name="keywords" content="ubuntu,linux,小米,双系统">
+<meta name="description" content="因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结。">
+<meta name="keywords" content="ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Win10安装ubuntu18.04双系统过程——小米air笔记本">
+<meta property="og:title" content="Win10安装ubuntu18.04双系统——小米air笔记本">
 <meta property="og:url" content="http://yoursite.com/2019/04/22/小米air笔记本Win10安装ubuntu18-04双系统过程/index.html">
 <meta property="og:site_name" content="Buffa&#39;s Blog">
-<meta property="og:description" content="因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结，整体流程不再赘述，主要参考博客列举如下（其中也有不少冗余步骤或者没有用到的步骤，我将在下面提到）：  Windows + Ubuntu 16.04 双系统安装详细教程 EFI引导如何在WIN10下安装Ubuntu18.04LTS双系统  设备参数：  小米air笔记本四核增强版 MX150独显">
+<meta property="og:description" content="因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结。">
 <meta property="og:locale" content="algorithms">
 <meta property="og:image" content="http://yoursite.com/images/rufus1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/rufus2.jpg">
 <meta property="og:image" content="http://yoursite.com/images/rufus3.jpg">
 <meta property="og:image" content="http://yoursite.com/images/rufus4.jpg">
-<meta property="og:updated_time" content="2019-04-22T15:06:10.192Z">
+<meta property="og:updated_time" content="2020-02-12T13:38:10.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Win10安装ubuntu18.04双系统过程——小米air笔记本">
-<meta name="twitter:description" content="因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结，整体流程不再赘述，主要参考博客列举如下（其中也有不少冗余步骤或者没有用到的步骤，我将在下面提到）：  Windows + Ubuntu 16.04 双系统安装详细教程 EFI引导如何在WIN10下安装Ubuntu18.04LTS双系统  设备参数：  小米air笔记本四核增强版 MX150独显">
+<meta name="twitter:title" content="Win10安装ubuntu18.04双系统——小米air笔记本">
+<meta name="twitter:description" content="因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结。">
 <meta name="twitter:image" content="http://yoursite.com/images/rufus1.jpg">
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <title>Win10安装ubuntu18.04双系统过程——小米air笔记本 | Buffa's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Win10安装ubuntu18.04双系统——小米air笔记本 | Buffa's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Win10安装ubuntu18.04双系统过程——小米air笔记本</h1>
+          <h1 class="post-title" itemprop="name headline">Win10安装ubuntu18.04双系统——小米air笔记本</h1>
         
 
         <div class="post-meta">
@@ -366,7 +366,7 @@
       
 
       
-        <p>因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结，整体流程不再赘述，主要参考博客列举如下（其中也有不少冗余步骤或者没有用到的步骤，我将在下面提到）：</p>
+        <p>因毕设需要，今天在小米air笔记本上装了一天ubuntu系统，期间也遇到了不少坑，在此对注意事项做一总结。<br><a id="more"></a><br>整体流程不再赘述，主要参考博客列举如下（其中也有不少冗余步骤或者没有用到的步骤，我将在下面提到）：</p>
 <ul>
 <li><a href="https://blog.csdn.net/flyyufenfei/article/details/79187656" target="_blank" rel="noopener">Windows + Ubuntu 16.04 双系统安装详细教程</a></li>
 <li><a href="https://51shenyun.cn/windows_and_ubuntu/" target="_blank" rel="noopener">EFI引导如何在WIN10下安装Ubuntu18.04LTS双系统</a></li>
@@ -377,14 +377,14 @@
 <li>MX150独显</li>
 <li>windows10系统</li>
 </ul>
-<p>目标：安装ubuntu18.04系统<br><a id="more"></a></p>
-<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><p>整个ubuntu的安装过程分为以下几步，并分别对每一步中需要注意的事项进行说明：</p>
+<p>目标：安装ubuntu18.04系统</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>整个ubuntu的安装过程分为以下几步，并分别对每一步中需要注意的事项进行说明：</p>
 <ol>
 <li>制作启动U盘</li>
 <li>更改电脑启动方式为从U盘启动</li>
 <li>安装ubuntu</li>
 </ol>
-<h1 id="制作启动U盘"><a href="#制作启动U盘" class="headerlink" title="制作启动U盘"></a>制作启动U盘</h1><p>制作启动U盘的常用做法是，利用rufus软件来进行。  </p>
+<h2 id="制作启动U盘"><a href="#制作启动U盘" class="headerlink" title="制作启动U盘"></a>制作启动U盘</h2><p>制作启动U盘的常用做法是，利用rufus软件来进行。  </p>
 <ul>
 <li><a href="https://rufus.ie/" target="_blank" rel="noopener">rufus下载链接</a></li>
 </ul>
@@ -411,14 +411,14 @@
 <li><a href="https://ywnz.com/linuxjc/3978.html" target="_blank" rel="noopener">使用Rufus 3.4制作Ubuntu 18.04.1U盘启动盘的方法</a></li>
 </ul>
 <p>之后即可完成U盘启动盘制作。</p>
-<h1 id="更改电脑启动方式"><a href="#更改电脑启动方式" class="headerlink" title="更改电脑启动方式"></a>更改电脑启动方式</h1><p>由于不同电脑更改电脑启动方式的方法不同，我参考小米笔记本的方式，链接如下：</p>
+<h2 id="更改电脑启动方式"><a href="#更改电脑启动方式" class="headerlink" title="更改电脑启动方式"></a>更改电脑启动方式</h2><p>由于不同电脑更改电脑启动方式的方法不同，我参考小米笔记本的方式，链接如下：</p>
 <ul>
 <li><a href="https://jingyan.baidu.com/article/a501d80c25ceadec620f5e5f.html" target="_blank" rel="noopener">小米笔记本bios如何设置U盘启动</a></li>
 </ul>
 <p>若按照第一步制作了U盘启动盘，则这一步没有什么问题。若没有将分区类型改为GPT的话，则会没有Boot Device Order选项。若像<a href="https://zhidao.baidu.com/question/2271479865559605308.html" target="_blank" rel="noopener">&lt;回答&gt;</a>中这样，通过将BOOT → Boot Type中更改启动模式为Legacy（另一个是UEFI)，则可以顺利启动U盘安装过程，但在后面自行分区的过程中，会提示需要设置一个EFI分区，但是通过Legacy启动模式是没有这个分区选项的。所以本质原因是制作U盘启动盘的问题。</p>
-<h1 id="安装Ubuntu"><a href="#安装Ubuntu" class="headerlink" title="安装Ubuntu"></a>安装Ubuntu</h1><p>与其他教程没有不同，新手最好不要安装最小系统，并断开网络以加快安装速度。重点在于分区部分。我根据教程<a href="https://ywnz.com/linuxjc/3978.html" target="_blank" rel="noopener">&lt;使用Rufus 3.4制作Ubuntu 18.04.1U盘启动盘的方法&gt;</a>选择了与windows系统兼容，没有选择其它方式进行自行分区，具体的不同还未调查。</p>
+<h2 id="安装Ubuntu"><a href="#安装Ubuntu" class="headerlink" title="安装Ubuntu"></a>安装Ubuntu</h2><p>与其他教程没有不同，新手最好不要安装最小系统，并断开网络以加快安装速度。重点在于分区部分。我根据教程<a href="https://ywnz.com/linuxjc/3978.html" target="_blank" rel="noopener">&lt;使用Rufus 3.4制作Ubuntu 18.04.1U盘启动盘的方法&gt;</a>选择了与windows系统兼容，没有选择其它方式进行自行分区，具体的不同还未调查。</p>
 <p>我共分出空闲空间20G，测试系统可以正常运行。</p>
-<h1 id="问题——双显卡电脑关机卡死"><a href="#问题——双显卡电脑关机卡死" class="headerlink" title="问题——双显卡电脑关机卡死"></a>问题——双显卡电脑关机卡死</h1><p>Ubuntu安装完成，但在关机时总是卡死，画面停留在命令行界面，显示CPU超时，只能强制关机。以下教程测试可用：</p>
+<h2 id="问题——双显卡电脑关机卡死"><a href="#问题——双显卡电脑关机卡死" class="headerlink" title="问题——双显卡电脑关机卡死"></a>问题——双显卡电脑关机卡死</h2><p>Ubuntu安装完成，但在关机时总是卡死，画面停留在命令行界面，显示CPU超时，只能强制关机。以下教程测试可用：</p>
 <ul>
 <li><a href="https://blog.csdn.net/MuyuXiaoxiang/article/details/80502703" target="_blank" rel="noopener">Ubuntu18.04中死机以及显卡切换解决办法</a></li>
 </ul>
@@ -442,12 +442,6 @@
           
             <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
-            <a href="/tags/小米/" rel="tag"># 小米</a>
-          
-            <a href="/tags/双系统/" rel="tag"># 双系统</a>
-          
         </div>
       
 
@@ -459,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/19/DFS-BFS-and-BestfirstSearch/" rel="next" title="DFS_BFS_and_BestfirstSearch">
-                <i class="fa fa-chevron-left"></i> DFS_BFS_and_BestfirstSearch
+              <a href="/2019/03/19/DFS-BFS-and-BestfirstSearch/" rel="next" title="DFS and BFS">
+                <i class="fa fa-chevron-left"></i> DFS and BFS
               </a>
             
           </div>
@@ -548,7 +542,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -570,7 +564,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -619,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作启动U盘"><span class="nav-number">2.</span> <span class="nav-text">制作启动U盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更改电脑启动方式"><span class="nav-number">3.</span> <span class="nav-text">更改电脑启动方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Ubuntu"><span class="nav-number">4.</span> <span class="nav-text">安装Ubuntu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题——双显卡电脑关机卡死"><span class="nav-number">5.</span> <span class="nav-text">问题——双显卡电脑关机卡死</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作启动U盘"><span class="nav-number">2.</span> <span class="nav-text">制作启动U盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改电脑启动方式"><span class="nav-number">3.</span> <span class="nav-text">更改电脑启动方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Ubuntu"><span class="nav-number">4.</span> <span class="nav-text">安装Ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题——双显卡电脑关机卡死"><span class="nav-number">5.</span> <span class="nav-text">问题——双显卡电脑关机卡死</span></a></li></ol></div>
             
 
           </div>
@@ -658,7 +652,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">6.3k</span>
   
 </div>
 

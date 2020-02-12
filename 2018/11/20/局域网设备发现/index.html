@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="bonjour,mdns," />
+  <meta name="keywords" content="mDNS," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local.">
-<meta name="keywords" content="bonjour,mdns">
+<meta name="description" content="本文介绍基于mDNS和Bonjour协议的物联网设备自主发现并分配IP的部分技术资料。">
+<meta name="keywords" content="mDNS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="局域网设备发现">
 <meta property="og:url" content="http://yoursite.com/2018/11/20/局域网设备发现/index.html">
 <meta property="og:site_name" content="Buffa&#39;s Blog">
-<meta property="og:description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local.">
+<meta property="og:description" content="本文介绍基于mDNS和Bonjour协议的物联网设备自主发现并分配IP的部分技术资料。">
 <meta property="og:locale" content="algorithms">
-<meta property="og:updated_time" content="2019-03-04T08:27:28.398Z">
+<meta property="og:updated_time" content="2020-02-12T13:43:55.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="局域网设备发现">
-<meta name="twitter:description" content="Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：1名称.服务类型.传输协议类型.local. 比如：1DamonWebServer._http._tcp.local. 又比如：1DummiesWebServer._http._tcp.local.">
+<meta name="twitter:description" content="本文介绍基于mDNS和Bonjour协议的物联网设备自主发现并分配IP的部分技术资料。">
 
 
 
@@ -324,7 +324,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1k
+                  1.1k
                 </span>
               
 
@@ -361,11 +361,10 @@
       
 
       
-        <p>Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">名称.服务类型.传输协议类型.local.</span><br></pre></td></tr></table></figure></p>
+        <p>本文介绍基于mDNS和Bonjour协议的物联网设备自主发现并分配IP的部分技术资料。<br><a id="more"></a><br>Bonjour提供的“服务发现”能力基于一个简单直接的规定，就是提供服务的设备在按以下标准对服务进行注册：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">名称.服务类型.传输协议类型.local.</span><br></pre></td></tr></table></figure></p>
 <p>比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DamonWebServer._http._tcp.local.</span><br></pre></td></tr></table></figure></p>
 <p>又比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DummiesWebServer._http._tcp.local.</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h1 id="两个协议："><a href="#两个协议：" class="headerlink" title="两个协议："></a>两个协议：</h1><ul>
+<h2 id="两个协议："><a href="#两个协议：" class="headerlink" title="两个协议："></a>两个协议：</h2><ul>
 <li><p>mDNS<br>设备通过组播的方式交互DNS记录来完成域名解析。<br>只能用于局域网内部，只接受解析主机名前缀为.local的域名<br>mDNS还可以在零配置网络中自行分配域名，自行分配后通过组播记录类型为”any”的mDNS包来检查重名<br><br>约定组播地址是：224.0.0.251，端口号：5353<br><br><br>组播查询：a.local地址<br>组播回复：a.local  ip    #DNS中的A类记录</p>
 </li>
 <li><p>DNS-SD<br>DNS based Service Discovery</p>
@@ -380,22 +379,24 @@
 </ul>
 </li>
 </ul>
-<h1 id="Bonjour"><a href="#Bonjour" class="headerlink" title="Bonjour"></a>Bonjour</h1><p>综合上述两个协议，将DNS-SD功能通过mDNS组播（224.0.0.254：5353）实现<br><br>SRV:服务实例 主机名 端口号<br><br>PTR:服务实例 服务名 查询域<br><br><br><br>Bonjour在零配置网络自行分配IP：需要用户设置路由信息如子网掩码等。<br><br>生成ip -&gt; 组播局域网内是否冲突<br><br>生成主机名 - &gt; 组播主机名是否冲突<br></p>
-<h2 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h2><p>socket是应用层和传输层之间的一个抽象层,将下层封装成简单的接口供应用层调用，实现进程在网络中通信<br>socket是一种文件模式，通过“打开–读/写–关闭”的模式进行操作</p>
-<p>五层结构：</p>
-<ul>
-<li>应用层    用户进程</li>
-<li>运输层    tcp,udp</li>
-<li>网络层    IP，icmp,igmp</li>
-<li>数据链路层    arp,rarp</li>
+<h2 id="Bonjour"><a href="#Bonjour" class="headerlink" title="Bonjour"></a>Bonjour</h2><p>综合上述两个协议，将DNS-SD功能通过mDNS组播（224.0.0.254：5353）实现<br><br>SRV:服务实例 主机名 端口号<br><br>PTR:服务实例 服务名 查询域<br><br><br><br>Bonjour在零配置网络自行分配IP：需要用户设置路由信息如子网掩码等。<br><br>生成ip -&gt; 组播局域网内是否冲突<br><br>生成主机名 - &gt; 组播主机名是否冲突<br></p>
+<h2 id="相关概念及参数"><a href="#相关概念及参数" class="headerlink" title="相关概念及参数"></a>相关概念及参数</h2><h3 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h3><p>socket是应用层和传输层之间的一个抽象层,将下层封装成简单的接口供应用层调用，实现进程在网络中通信<br>socket是一种文件模式，通过“打开–读/写–关闭”的模式进行操作</p>
+<h3 id="网络五层结构："><a href="#网络五层结构：" class="headerlink" title="网络五层结构："></a>网络五层结构：</h3><ul>
+<li>应用层: 用户进程</li>
+<li>运输层: tcp, udp</li>
+<li>网络层: IP, icmp, igmp</li>
+<li>数据链路层: arp, rarp</li>
 <li>物理层</li>
 </ul>
-<h2 id="DNS各项记录内容"><a href="#DNS各项记录内容" class="headerlink" title="DNS各项记录内容"></a>DNS各项记录内容</h2><ul>
+<h3 id="DNS各项记录内容"><a href="#DNS各项记录内容" class="headerlink" title="DNS各项记录内容"></a>DNS各项记录内容</h3><ul>
 <li>TXT:某个主机名或域名的说明，方便联系</li>
-<li>PTR：反向DNS 将一个IP地址映射到对应的主机名，A记录的反向<br><br><code>DNS-SD中的PTR概念与此不同，用来记录服务到服务实例的映射</code></li>
+<li>PTR：反向DNS 将一个IP地址映射到对应的主机名，A记录的反向<br><blockquote>
+<p>DNS-SD中的PTR概念与此不同，用来记录服务到服务实例的映射</p>
+</blockquote>
+</li>
 <li>SRV：用于标识承载特定服务的计算机</li>
 </ul>
-<h1 id="mDNS示例通信程序"><a href="#mDNS示例通信程序" class="headerlink" title="mDNS示例通信程序"></a>mDNS示例通信程序</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在前者的基础上，实现 Client --&gt; Sever 的通讯，如此一来便是双向通讯</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">'net'</span>);</span><br><span class="line"><span class="keyword">var</span> chatServer = net.createServer(),    </span><br><span class="line">    clientList = [];</span><br><span class="line">    </span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">client</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// JS 可以为对象自由添加属性。这里我们添加一个 name 的自定义属性，用于表示哪个客户端（客户端的地址+端口为依据）</span></span><br><span class="line">  client.name = client.remoteAddress + <span class="string">':'</span> + client.remotePort;  </span><br><span class="line">  client.write(<span class="string">'Hi '</span> + client.name + <span class="string">'!\n'</span>);  </span><br><span class="line">#应该是一个数组对象方法</span><br><span class="line">  clientList.push(client);  </span><br><span class="line">#socket data事件：当收到数据时触发该事件，data参数是string或Buffer</span><br><span class="line">  client.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;    </span><br><span class="line">     broadcast(data, client);<span class="comment">// 接受来自客户端的信息  </span></span><br><span class="line">  &#125;);</span><br><span class="line">  client.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    clientList.splice(clientList.indexOf(client),<span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  client.on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">#向其它所有socket进行广播分发</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">broadcast</span>(<span class="params">message, client</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;clientList.length;i+=<span class="number">1</span>) &#123;    </span><br><span class="line">      <span class="keyword">if</span>(client!==clientList[i])&#123;</span><br><span class="line">          <span class="keyword">if</span>(clientList[i].writable)&#123;</span><br><span class="line">              clientList[i].write(client.name+<span class="string">"says"</span>+message);</span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">              #销毁socket</span><br><span class="line">              cleanup.push(clientList[i]);</span><br><span class="line">              clientList[i].destory();</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">#将结束的socket从客户链中删除</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;cleanup.length;i+=<span class="number">1</span>) &#123;</span><br><span class="line">    clientList.splice(clientList.indexOf(cleanup[i]), <span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">chatServer.listen(<span class="number">9000</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="mDNS示例通信程序"><a href="#mDNS示例通信程序" class="headerlink" title="mDNS示例通信程序"></a>mDNS示例通信程序</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在前者的基础上，实现 Client --&gt; Sever 的通讯，如此一来便是双向通讯</span></span><br><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">'net'</span>);</span><br><span class="line"><span class="keyword">var</span> chatServer = net.createServer(),    </span><br><span class="line">    clientList = [];</span><br><span class="line">    </span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">client</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// JS 可以为对象自由添加属性。这里我们添加一个 name 的自定义属性，用于表示哪个客户端（客户端的地址+端口为依据）</span></span><br><span class="line">  client.name = client.remoteAddress + <span class="string">':'</span> + client.remotePort;  </span><br><span class="line">  client.write(<span class="string">'Hi '</span> + client.name + <span class="string">'!\n'</span>);  </span><br><span class="line">#应该是一个数组对象方法</span><br><span class="line">  clientList.push(client);  </span><br><span class="line">#socket data事件：当收到数据时触发该事件，data参数是string或Buffer</span><br><span class="line">  client.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;    </span><br><span class="line">     broadcast(data, client);<span class="comment">// 接受来自客户端的信息  </span></span><br><span class="line">  &#125;);</span><br><span class="line">  client.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    clientList.splice(clientList.indexOf(client),<span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  client.on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">#向其它所有socket进行广播分发</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">broadcast</span>(<span class="params">message, client</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;clientList.length;i+=<span class="number">1</span>) &#123;    </span><br><span class="line">      <span class="keyword">if</span>(client!==clientList[i])&#123;</span><br><span class="line">          <span class="keyword">if</span>(clientList[i].writable)&#123;</span><br><span class="line">              clientList[i].write(client.name+<span class="string">"says"</span>+message);</span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">              #销毁socket</span><br><span class="line">              cleanup.push(clientList[i]);</span><br><span class="line">              clientList[i].destory();</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">#将结束的socket从客户链中删除</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;cleanup.length;i+=<span class="number">1</span>) &#123;</span><br><span class="line">    clientList.splice(clientList.indexOf(cleanup[i]), <span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">chatServer.listen(<span class="number">9000</span>);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -413,9 +414,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bonjour/" rel="tag"># bonjour</a>
-          
-            <a href="/tags/mdns/" rel="tag"># mdns</a>
+            <a href="/tags/mDNS/" rel="tag"># mDNS</a>
           
         </div>
       
@@ -521,7 +520,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -543,7 +542,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -592,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#两个协议："><span class="nav-number">1.</span> <span class="nav-text">两个协议：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bonjour"><span class="nav-number">2.</span> <span class="nav-text">Bonjour</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#socket"><span class="nav-number">2.1.</span> <span class="nav-text">socket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS各项记录内容"><span class="nav-number">2.2.</span> <span class="nav-text">DNS各项记录内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mDNS示例通信程序"><span class="nav-number">3.</span> <span class="nav-text">mDNS示例通信程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#两个协议："><span class="nav-number">1.</span> <span class="nav-text">两个协议：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bonjour"><span class="nav-number">2.</span> <span class="nav-text">Bonjour</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关概念及参数"><span class="nav-number">3.</span> <span class="nav-text">相关概念及参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Socket"><span class="nav-number">3.1.</span> <span class="nav-text">Socket</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络五层结构："><span class="nav-number">3.2.</span> <span class="nav-text">网络五层结构：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS各项记录内容"><span class="nav-number">3.3.</span> <span class="nav-text">DNS各项记录内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mDNS示例通信程序"><span class="nav-number">4.</span> <span class="nav-text">mDNS示例通信程序</span></a></li></ol></div>
             
 
           </div>
@@ -631,7 +630,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">6.3k</span>
   
 </div>
 
