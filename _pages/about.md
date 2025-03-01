@@ -16,9 +16,8 @@ Selected News
 * **[01/2025]** Three papers get accepted by ICRA 2025!
 
 
-Publications
+Selected Publications
 ======
-## My Publications
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
