@@ -18,7 +18,7 @@ school: "N/A"
 awards: "Honorable Mention for 2021 IEEE T-RO King-Sun Fu Memorial Best Paper Award."
 notes: ""
 include_on_website: true
-image: "2021-tian-dc2pgo-2.gif"
+image: "2021-tian-dc2pgo.gif"
 links_to_code: "https://github.com/mit-acl/dpgo"
 links_to_video: "https://youtu.be/PpFMTGNJpaA?si=yypwLxUMp_rttM-k"
 links_to_website: ""
