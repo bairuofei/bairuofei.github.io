@@ -24,8 +24,8 @@ author:
   avatar           : "profile.png"
   name             : "Ruofei Bai"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
+  bio              : "PhD candidate at Nanyang Technological University"
+  location         : "Singapore"
   employer         : "Nanyang Technological University"
   uri              : # URL
   email            : "ruofei001@e.ntu.edu.sg" 
@@ -34,9 +34,9 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=1deQ5u4AAAAJ&hl=en&oi=ao"
   impactstory      : # URL
-  orcid            : "https://orcid.org/my-orcid?orcid=0000-0001-7201-0409"
+  orcid            : # "https://orcid.org/my-orcid?orcid=0000-0001-7201-0409"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : 
   researchgate     : # URL
   scopus           : # URL
 
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "https://www.linkedin.com/in/ruofei-bai-b8b021195/?originalSubdomain=sg" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
