@@ -18,7 +18,7 @@ school: "N/A"
 awards: ""
 notes: ""
 include_on_website: false
-image: "2020-fathian-clear.png"
+image: "2021-tian-dc2pgo.gif"
 links_to_code: "https://github.com/mit-acl/clear"
 links_to_video: "https://youtu.be/RBxq9KYcgTY?si=04FHbjtrlswa3xkd"
 links_to_website: ""
