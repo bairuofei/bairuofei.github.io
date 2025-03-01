@@ -18,5 +18,27 @@ Selected News
 
 Publications
 ======
+## My Publications
 
-{% include_relative publications.md %}
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <div>
+        <strong><a href="paper1.pdf">Title of the Paper</a></strong>  
+        <br>
+        <em>Author 1, Author 2, Author 3</em>  
+        <br>
+        Conference Name, Year
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="paper2.gif" width="200" style="margin-right: 20px;">
+    <div>
+        <strong><a href="paper2.pdf">Another Paper Title</a></strong>  
+        <br>
+        <em>Author A, Author B, Author C</em>  
+        <br>
+        Journal Name, Year
+    </div>
+</div>
+
