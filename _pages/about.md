@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Ruofei Bai's Academic Website"
+title: "Ruofei Bai (白若飞)"
 author_profile: true
 redirect_from: 
   - /about/

@@ -1,12 +1,12 @@
 ---
 layout: archive
-title: "Featured Publications"
+title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
 
 This page shows selected journal articles and conference papers.
-For a complete list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=r-v0cusAAAAJ&hl=en&oi=ao) or see my [CV](/files/YulunTian_CV.pdf).
+For a complete list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=1deQ5u4AAAAJ&hl=en&oi=ao) or see my [CV](/files/CV_BaiRuofei.pdf).
 
 {% include base_path %}
 
