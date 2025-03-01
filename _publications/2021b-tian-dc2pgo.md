@@ -15,7 +15,7 @@ month: ""
 address: ""
 type: "journal"
 school: "N/A"
-awards: "Honorable Mention for 2021 IEEE T-RO King-Sun Fu Memorial Best Paper Award."
+# awards: "Honorable Mention for 2021 IEEE T-RO King-Sun Fu Memorial Best Paper Award."
 notes: ""
 include_on_website: true
 image: "2021-tian-dc2pgo.gif"
