@@ -27,7 +27,7 @@ author:
   bio              : "PhD candidate at Nanyang Technological University"
   location         : "Singapore"
   employer         : "Nanyang Technological University"
-  uri              : # URL
+  URI              : "https://bairuofei.github.io" # URL
   email            : "ruofei001@e.ntu.edu.sg" 
 
   # Academic websites
