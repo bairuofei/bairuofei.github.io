@@ -15,9 +15,9 @@ My research primarily focuses on **planning and optimization problems** in multi
 
 Selected News
 ======
-* **[01/2025]** Three papers get accepted by **IEEE ICRA 2025**!
-* **[07/2024]** One paper gets accepted by **IEEE/RSJ IROS 2024**!
-* **[06/2024]** One paper gets accepted by **IEEE RA-L**!
+* [01/2025] Three papers get accepted by IEEE ICRA 2025!
+* [07/2024] One paper gets accepted by IEEE/RSJ IROS 2024!
+* [06/2024] One paper gets accepted by IEEE RA-L!
 
 
 Selected Publications
@@ -25,11 +25,11 @@ Selected Publications
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper1.pdf">Title of the Paper</a></strong>  
+        <strong><a href="paper1.pdf">Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles</a></strong>  
         <br>
-        <em>Author 1, Author 2, Author 3</em>  
+        <em>Ruofei Bai, Shenghai Yuan, Kun Li, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
-        Conference Name, Year
+        2025 International Conference on Robotics and Automation
     </div>
 </div>
 
