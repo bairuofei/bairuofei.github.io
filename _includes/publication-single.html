@@ -1,40 +1,43 @@
 {% include base_path %}
 
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}
 
-<!-- 分类显示：Preprint 和 Published Papers -->
-{% if post.category == "Preprint" %}
-  {% assign category = "Preprint" %}
-{% else %}
-  {% assign category = "Published Papers" %}
-{% endif %}
-
-{% assign authors = post.authors | replace_first: 'Ruofei Bai', '<b>Ruofei Bai</b>' %}
-{% assign authors = authors | replace: '"{o}', 'ö' %}
-{% assign authors = authors | replace: '"{u}', 'ü' %}
-
-<!-- 悬挂缩进的列表格式 -->
-<div style="margin-bottom: 10px; text-indent: -30px; padding-left: 30px;">
-  <b>{{ post.index }}.</b> {{ authors }}, "{{ title }}", {{ post.venue }}, {{ post.year }}
-  {% if post.status == "in review" %}(in review){% endif %}
-  {% if post.status == "accepted" %}(accepted){% endif %}
-  {% if post.status == "to appear" %}(to appear){% endif %}.
+<div style="margin-left: 20px;">
+  <h2 style="margin-top: 10px; margin-bottom: 0px;">Publications</h2>
   
-  <!-- 论文链接 -->
-  {% if post.arxiv != "" and post.arxiv != "N/A" %}
-    <a href="{{ post.arxiv }}" target="_blank">[arxiv]</a>
-  {% endif %}
-  {% if post.links_to_website != "" and post.links_to_website != "N/A" %}
-    <a href="{{ post.links_to_website }}" target="_blank">[website]</a>
-  {% endif %}
-  {% if post.links_to_code != "" and post.links_to_code != "N/A" %}
-    <a href="{{ post.links_to_code }}" target="_blank">[code]</a>
-  {% endif %}
-  {% if post.links_to_video != "" and post.links_to_video != "N/A" %}
-    <a href="{{ post.links_to_video }}" target="_blank">[video]</a>
-  {% endif %}
+  {% assign counter = 0 %}
+  {% for post in site.publications %}
+    {% assign counter = counter | plus: 1 %}
+    <div style="text-indent: -30px; padding-left: 30px; margin-bottom: 10px;">
+      <span>[{{ counter }}]</span> 
+      <strong>{{ post.authors | replace_first: 'Ruofei Bai', '<b>Ruofei Bai</b>' }}</strong>, 
+      "{{ post.title }}", 
+      {% if post.venue %}{{ post.venue }}, {% endif %}{{ post.year }}
+      {% if post.status == "in review" %}(in review){% elsif post.status == "accepted" %}(accepted){% elsif post.status == "to appear" %}(to appear){% endif %}.
+      
+      {% if post.links_to_website != "" and post.links_to_website != "N/A" %}
+        <a href="{{ post.links_to_website }}" target="_blank">Website</a>
+      {% endif %}
+      {% if post.arxiv != "" and post.arxiv != "N/A" %}
+        <a href="{{ post.arxiv }}" target="_blank">[arXiv]</a>
+      {% endif %}
+      {% if post.links_to_code != "" and post.links_to_code != "N/A" %}
+        <a href="{{ post.links_to_code }}" target="_blank">[Code]</a>
+      {% endif %}
+      {% if post.links_to_video != "" and post.links_to_video != "N/A" %}
+        <a href="{{ post.links_to_video }}" target="_blank">[Video]</a>
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>
+
