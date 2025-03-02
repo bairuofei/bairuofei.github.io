@@ -13,7 +13,19 @@
 {% endif %}
 
 <!--  <table border="0"> -->
- <table border="0" style="border: none; border-collapse: collapse; border-right: none; border-bottom: none;">
+
+table, th, td {
+    border: none !important;
+    border-collapse: collapse !important;
+}
+
+td, th {
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+
+ <table>
  <tr>
  <td style="width: 300px"><img src="/images/publications/{{ post.image }}" width=250px style="border: 2px black; float:left; margin-right:15px; border-radius: 5px; border-style: none;"/></td>
  <td>
