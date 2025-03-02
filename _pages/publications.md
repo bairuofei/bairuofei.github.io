@@ -15,7 +15,7 @@ For a complete list of my publications, please visit my [Google Scholar profile]
 }
 </style>
 
-<p class="hanging-indent">[1] 作者1, 作者2, 作者3, “论文标题”, 会议/期刊, 年份. <a href="https://example.com">[arXiv]</a></p>
+<p class="hanging-indent">[1] 作者1, 作者2, 作者3,作者1, 作者2, 作者3,作者1, 作者2, 作者3,作者1, 作者2, 作者3,作者1, 作者2, 作者3, “论文标题”, 会议/期刊, 年份. <a href="https://example.com">[arXiv]</a></p>
 <p class="hanging-indent">[2] 作者A, 作者B, “另一篇论文”, 会议/期刊, 年份. <a href="https://example.com">[PDF]</a></p>
 
 
