@@ -1,3 +1,4 @@
+
 {% include base_path %}
 
 {% if post.header.teaser %}
@@ -12,15 +13,8 @@
   {% assign title = post.title %}
 {% endif %}
 
- <table>
- <tr>
- <td style="width: 300px"><img src="/images/publications/{{ post.image }}" width=250px style="border: 2px black; float:left; margin-right:15px; border-radius: 5px; border-style: none;"/></td>
- <td>
- <div>
+<div>
     <h2 style="margin-top: 10px; margin-bottom: 0px;">{{ title }}</h2>
-
-    <!-- Don't bold anyone's name -->
-    <!-- {% assign authors = post.authors %} -->
 
     <!-- Bold a particular author's name -->
     {% assign authors = post.authors | replace_first: 'Ruofei Bai', '<b>Ruofei Bai</b>' %}
@@ -61,17 +55,14 @@
 
     <h3 style="margin-top: 10px; margin-bottom: 0px;">
 
-        <!-- Website -->
         {% if post.links_to_website != "" and post.links_to_website != "N/A" %}
           <a style="text-decoration: none;" href="{{ post.links_to_website }}" target="_blank">Website <i class="fa fa-globe"></i></a>&nbsp;&nbsp;&nbsp;
         {% endif %}
         
-        <!-- Arxiv Paper -->
         {% if post.arxiv != "" and post.arxiv != "N/A" %}
           <a style="text-decoration: none;" href="{{ post.arxiv }}" target="_blank">Paper <i class="fa fa-file"></i></a>&nbsp;&nbsp;&nbsp;
         {% endif %}
         
-        <!-- Code -->
         {% if post.links_to_code contains "," %}
           {% assign codes = post.links_to_code | split: ", " %}
           Code: [
@@ -87,16 +78,8 @@
           <a style="text-decoration: none;" href="{{ post.links_to_code }}" target="_blank">Code <i class="fa fa-code"></i></a>&nbsp;&nbsp;&nbsp;
         {% endif %}
 
-        <!-- Video -->
         {% if post.links_to_video != "" and post.links_to_video != "N/A" %}
           <a style="text-decoration: none;" href="{{ post.links_to_video }}" target="_blank">Video <i class="fa fa-film"></i></a>&nbsp;&nbsp;&nbsp;
         {% endif %}
     </h3>
-<!--      <h5>
-         <a href="https://ieeexplore.ieee.org/document/9638658" target="_blank">IEEE Xplore <i class="fa fa-file"></i></a>
-         &nbsp;&nbsp;&nbsp;
-     </h5> -->
- </div>
- </td>
- </tr>
- </table>
+</div>
