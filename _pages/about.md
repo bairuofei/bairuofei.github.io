@@ -34,13 +34,48 @@ Selected Publications
 </div>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="paper2.gif" width="200" style="margin-right: 20px;">
+    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper2.pdf">Another Paper Title</a></strong>  
+        <strong><a href="paper1.pdf">Graph-based Slam-Aware Exploration with Prior Topo-Metric Information</a></strong>  
         <br>
-        <em>Author A, Author B, Author C</em>  
+        <em><b>Ruofei Bai</b>, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
-        Journal Name, Year
+        IEEE Robotics and Automation Letters (RAL)
     </div>
 </div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <div>
+        <strong><a href="paper1.pdf">Multi-Robot Active Graph Exploration with Reduced Pose-SLAM Uncertainty via Submodular Optimization</a></strong>  
+        <br>
+        <em><b>Ruofei Bai</b>, Shenghai Yuan, Hongliang Guo, Pengyu Yin, Wei-Yun Yau, Lihua Xie</em>  
+        <br>
+        2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <div>
+        <strong><a href="paper1.pdf">Hierarchical Multi-Robot Strategies Synthesis and Optimization under Individual and Collaborative Temporal Logic Specifications</a></strong>  
+        <br>
+        <em><b>Ruofei Bai</b>, Ronghao Zheng, Meiqin Liu, Senlin Zhang</em>  
+        <br>
+        Robotics and Autonomous Systems (RAS)
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <div>
+        <strong><a href="paper1.pdf">Multi-Robot Task Planning under Individual and Collaborative Temporal Logic Specifications</a></strong>  
+        <br>
+        <em><b>Ruofei Bai</b>, Ronghao Zheng, Meiqin Liu, Senlin Zhang</em>  
+        <br>
+        2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+    </div>
+</div>
+
+
 
