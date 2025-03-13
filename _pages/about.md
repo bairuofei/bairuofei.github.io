@@ -29,7 +29,7 @@ Selected News
 Selected Publications
 ======
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <img src="../images/publications/2025-bai-realm.gif" width="200" style="margin-right: 20px;">
     <div>
         <strong><a href="paper1.pdf">Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles</a></strong>  
         <br>
