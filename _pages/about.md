@@ -35,7 +35,7 @@ Selected Publications
         <br>
         <em><b>Ruofei Bai</b>, Shenghai Yuan, Kun Li, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
-        2025 International Conference on Robotics and Automation
+        2025 IEEE International Conference on Robotics and Automation (ICRA)
     </div>
 </div>
 
@@ -46,7 +46,7 @@ Selected Publications
         <br>
         <em><b>Ruofei Bai</b>, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
-        IEEE Robotics and Automation Letters (RAL)
+        IEEE Robotics and Automation Letters (RA-L), 2024
     </div>
 </div>
 
@@ -62,13 +62,13 @@ Selected Publications
 </div>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <img src="../images/publications/2022-RAS-ltl2.png" width="200" style="margin-right: 20px;">
     <div>
         <strong><a href="paper1.pdf">Hierarchical Multi-Robot Strategies Synthesis and Optimization under Individual and Collaborative Temporal Logic Specifications</a></strong>  
         <br>
         <em><b>Ruofei Bai</b>, Ronghao Zheng, Meiqin Liu, Senlin Zhang</em>  
         <br>
-        Robotics and Autonomous Systems (RAS)
+        Robotics and Autonomous Systems (RAS), 2022
     </div>
 </div>
 
