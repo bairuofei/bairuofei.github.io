@@ -40,7 +40,7 @@ Selected Publications
 </div>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <img src="../images/publications/2024-bai-SAE.gif" width="200" style="margin-right: 20px;">
     <div>
         <strong><a href="paper1.pdf">Graph-based Slam-Aware Exploration with Prior Topo-Metric Information</a></strong>  
         <br>
@@ -51,7 +51,7 @@ Selected Publications
 </div>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <img src="../images/publications/2024-bai-CGE.gif" width="200" style="margin-right: 20px;">
     <div>
         <strong><a href="paper1.pdf">Multi-Robot Active Graph Exploration with Reduced Pose-SLAM Uncertainty via Submodular Optimization</a></strong>  
         <br>
@@ -73,7 +73,7 @@ Selected Publications
 </div>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="../images/publications/2021-tian-dc2pgo.gif" width="200" style="margin-right: 20px;">
+    <img src="../images/publications/2021-bai-ltl.gif" width="200" style="margin-right: 20px;">
     <div>
         <strong><a href="paper1.pdf">Multi-Robot Task Planning under Individual and Collaborative Temporal Logic Specifications</a></strong>  
         <br>
