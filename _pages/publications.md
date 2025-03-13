@@ -14,7 +14,7 @@ author_profile: true
 ------
 1. Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles,
  2025 IEEE International Conference on Robotics and Automation (ICRA)
- **Ruofei Bai**, S Yuan, K Li, H Guo, WY Yau, L Xie. [Arxiv](https://arxiv.org/abs/2502.15162) [Code](https://github.com/bairuofei/LoS_constrained_navigation)
+ **Ruofei Bai**, S Yuan, K Li, H Guo, WY Yau, L Xie. [[Arxiv]](https://arxiv.org/abs/2502.15162) [Code](https://github.com/bairuofei/LoS_constrained_navigation)
 2. Swept Volume-Aware Trajectory Planning and MPC Tracking for Multi-Axle Swerve-Drive AMRs,
  2025 IEEE International Conference on Robotics and Automation (ICRA)
  T Hu, S Yuan, **Ruofei Bai**, X Xu, Y Liao, F Liu,L Xie. [Arxiv](https://arxiv.org/abs/2412.16875) 
