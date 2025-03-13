@@ -42,7 +42,7 @@ Selected Publications
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2024-bai-SAE.gif" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper1.pdf">Graph-based Slam-Aware Exploration with Prior Topo-Metric Information</a></strong>  
+        <strong><a href="https://arxiv.org/abs/2308.16522">Graph-based Slam-Aware Exploration with Prior Topo-Metric Information</a></strong>  
         <br>
         <em><b>Ruofei Bai</b>, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
@@ -53,7 +53,7 @@ Selected Publications
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2024-bai-CGE.gif" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper1.pdf">Multi-Robot Active Graph Exploration with Reduced Pose-SLAM Uncertainty via Submodular Optimization</a></strong>  
+        <strong><a href="https://arxiv.org/abs/2407.01013">Multi-Robot Active Graph Exploration with Reduced Pose-SLAM Uncertainty via Submodular Optimization</a></strong>  
         <br>
         <em><b>Ruofei Bai</b>, Shenghai Yuan, Hongliang Guo, Pengyu Yin, Wei-Yun Yau, Lihua Xie</em>  
         <br>
@@ -64,7 +64,7 @@ Selected Publications
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2022-RAS-ltl2.png" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper1.pdf">Hierarchical Multi-Robot Strategies Synthesis and Optimization under Individual and Collaborative Temporal Logic Specifications</a></strong>  
+        <strong><a href="https://arxiv.org/abs/2110.11162">Hierarchical Multi-Robot Strategies Synthesis and Optimization under Individual and Collaborative Temporal Logic Specifications</a></strong>  
         <br>
         <em><b>Ruofei Bai</b>, Ronghao Zheng, Meiqin Liu, Senlin Zhang</em>  
         <br>
@@ -75,7 +75,7 @@ Selected Publications
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2021-bai-ltl.gif" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper1.pdf">Multi-Robot Task Planning under Individual and Collaborative Temporal Logic Specifications</a></strong>  
+        <strong><a href="https://arxiv.org/abs/2108.11597">Multi-Robot Task Planning under Individual and Collaborative Temporal Logic Specifications</a></strong>  
         <br>
         <em><b>Ruofei Bai</b>, Ronghao Zheng, Meiqin Liu, Senlin Zhang</em>  
         <br>
