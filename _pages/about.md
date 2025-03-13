@@ -31,7 +31,7 @@ Selected Publications
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
     <img src="../images/publications/2025-bai-realm.gif" width="200" style="margin-right: 20px;">
     <div>
-        <strong><a href="paper1.pdf">Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles</a></strong>  
+        <strong><a href="https://arxiv.org/abs/2502.15162">Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles</a></strong>  
         <br>
         <em><b>Ruofei Bai</b>, Shenghai Yuan, Kun Li, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
