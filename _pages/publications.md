@@ -6,7 +6,7 @@ author_profile: true
 ---
 ## Preprints
 ------
-
+1. X Li, K Xu, F Liu, **Ruofei Bai**, S Yuan, L Xie, "AirSwarm: Enabling Cost-Effective Multi-UAV Research with COTS drones", under review. [[Arxiv]](https://arxiv.org/abs/2503.06890)
 
 ## Published Articles
 ------
