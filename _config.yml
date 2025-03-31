@@ -21,7 +21,7 @@ repository               : "https://github.com/bairuofei/bairuofei.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "ruofei.jpeg"
   name             : "Ruofei Bai (白若飞)"
   pronouns         : # example: "she/her"  
   bio              : "PhD candidate @ Nanyang Technological University"
