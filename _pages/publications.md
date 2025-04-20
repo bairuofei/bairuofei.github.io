@@ -8,6 +8,8 @@ author_profile: true
 ------
 1. X Li, K Xu, F Liu, **Ruofei Bai**, S Yuan, L Xie, "AirSwarm: Enabling Cost-Effective Multi-UAV Research with COTS drones", under review. [[Arxiv]](https://arxiv.org/abs/2503.06890)
 
+2. Y Liao\*, X Xu\*, **Ruofei Bai**, Y Yang, M Cao, S Yuan, L Xie, "Following Is All You Need: Robot Crowd Navigation Using People As Planners", under review. [[Arxiv]](https://arxiv.org/abs/2504.10828)
+
 ## Published Articles
 ------
 1. **Ruofei Bai**, S Yuan, K Li, H Guo, WY Yau, L Xie. "Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles", 2025 IEEE International Conference on Robotics and Automation (ICRA)
