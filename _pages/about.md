@@ -37,7 +37,7 @@ Selected Publications
         <br>
         <em><b>Ruofei Bai</b>, Shenghai Yuan, Kun Li, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
-        2025 IEEE International Conference on Robotics and Automation (ICRA)<span style="color: red; font-weight: bold;">– Best Paper Award Finalist</span>
+        2025 IEEE International Conference on Robotics and Automation (ICRA) <span style="color: red; font-weight: bold;">Best Paper Award Finalist</span>
     </div>
 </div>
 
