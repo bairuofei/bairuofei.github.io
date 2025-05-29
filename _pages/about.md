@@ -21,7 +21,7 @@ My research primarily focuses on **planning and optimization problems** in multi
 
 Selected News
 ======
-* [05/2025] My first-authored paper "Realm: Real-Time Line-of-Sight Maintenance in Multi-Robot Navigation with Unknown Obstacles" was selected as the ICRA 2025 Best Conference Paper Award Finalist.
+* [05/2025] My first-authored paper about line-of-sight maintenance was selected as the ICRA 2025 Best Conference Paper Award Finalist.
 * [05/2025] I presented two papers about SLAM-aware exploration and line-of-sight maintenance at IEEE ICRA 2025 at Atlanta, USA.
 * [01/2025] Three papers got accepted by IEEE ICRA 2025!
 * [07/2024] One paper got accepted by IEEE/RSJ IROS 2024!
@@ -37,8 +37,7 @@ Selected Publications
         <br>
         <em><b>Ruofei Bai</b>, Shenghai Yuan, Kun Li, Hongliang Guo, Wei-Yun Yau, Lihua Xie</em>  
         <br>
-        <div style="color: red; font-weight: bold; margin-bottom: 5px;">Best Paper</div>
-        2025 IEEE International Conference on Robotics and Automation (ICRA)
+        2025 IEEE International Conference on Robotics and Automation (ICRA)<span style="color: red; font-weight: bold;">– Best Paper Award Finalist</span>
     </div>
 </div>
 
