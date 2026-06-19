@@ -83,7 +83,13 @@ redirect_from:
 
 I am currently a fourth-year Ph.D. candidate at Nanyang Technological University (NTU), supervised by [Prof. Lihua Xie](https://scholar.google.com.sg/citations?user=Fmrv3J8AAAAJ&hl=en) from NTU and co-supervised by [Dr. Yau Wei-Yun](https://scholar.google.com.sg/citations?user=B_VchHYAAAAJ&hl=en) from Agency for Science, Technology and Research (A*STAR), Singapore. Before that, I received both my M. Eng. degree (2022) and B. Eng. degree (2019) from Zhejiang University (ZJU), under the supervision of [Assoc. Prof. Ronghao Zheng](https://scholar.google.com/citations?user=LxgdmqYAAAAJ&hl=en).
 
-My past research primarily focuses on **planning and optimization problems** in multi-robot systems, including autonomous exploration, active SLAM, and planning under practical communication and temporal constraints. I am passionate about **uncovering the mathematical foundations underlying practical challenges** in autonomous robotic systems for real-world deployment, utilizing tools from optimization, graph theory, etc. I am also actively seeking the combination of robotics and learning-based foundation models. Feel free to reach out if you're interested in my work!
+<!-- I am passinate about developing intelligent robot systems that understand, reason, and act in 3D real word, with consistent spatial awareness, long-term temporal memory, and angile mobility.
+I believe physical intelligence is the next step that grounding and extending the capability and existance of emergant language and visual foundation models, for a better life. -->
+
+
+I am passionate about developing intelligent robotic systems that can understand, reason about, and act in the 3D real world, with consistent spatial awareness, long-term memory, and agile mobility. I believe physical intelligence is a crucial next step toward grounding and extending the capabilities of emerging language and vision foundation models, ultimately benefiting everyday life.
+
+My research has primarily focused on robot planning and coordination using generative models, reinforcement learning, optimization, graph theory, and symbolic/formal methods. My research topics include active localization and mapping, planning under complex spatiotemporal constraints, and autonomous exploration, with an emphasis on real-world applications. More exciting research lies ahead. Feel free to reach out for discussions or collaborations!
 <p class="spacing"></p>
 
 Selected News
