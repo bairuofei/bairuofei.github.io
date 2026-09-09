@@ -399,3 +399,35 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/*
+   Visitor map
+   ========================================================================== */
+
+.visitor-map {
+  clear: both;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  overflow: hidden;
+
+  iframe,
+  img,
+  object,
+  embed,
+  canvas {
+    max-width: 100%;
+  }
+}
+
+.visitor-map__fallback {
+  margin: 0.5rem 0 0;
+  font-family: $sans-serif;
+  font-size: $type-size-7;
+  line-height: 1.4;
+
+  a {
+    color: mix(#fff, $gray, 25%);
+  }
+}

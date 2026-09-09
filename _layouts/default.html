@@ -18,11 +18,21 @@ layout: compress
 
     {{ content }}
 
-    <div id="clustrmaps-container" style="width: 400px; margin: auto;">
-      <script type="text/javascript" id="clustrmaps" 
-          src="//clustrmaps.com/map_v2.js?d=RalidfRLo3JUp98o1N7eoIpjeMUYfGgpOHr0wOugL6U&cl=ffffff&w=a">
-      </script>
-    </div>
+    {% if page.url == "/" %}
+      <div id="clustrmaps-container" class="visitor-map" aria-label="Visitor map">
+        <script type="text/javascript" id="clustrmaps"
+            src="https://clustrmaps.com/map_v2.js?d=RalidfRLo3JUp98o1N7eoIpjeMUYfGgpOHr0wOugL6U&cl=ffffff&w=a">
+        </script>
+        <noscript>
+          <p class="visitor-map__fallback">
+            <a href="https://clustrmaps.com/" target="_blank" rel="nofollow noopener">View visitor map on ClustrMaps</a>
+          </p>
+        </noscript>
+        <p class="visitor-map__fallback">
+          <a href="https://clustrmaps.com/" target="_blank" rel="nofollow noopener">Visitor map by ClustrMaps</a>
+        </p>
+      </div>
+    {% endif %}
 
 
     <div class="page__footer">

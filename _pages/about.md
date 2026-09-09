@@ -94,6 +94,7 @@ My research has primarily focused on robot planning and coordination using gener
 
 Selected News
 ======
+* [09/2026] Two paper got accepted by CoRL 2026! The first attempt to introduce a distribution learning paradigm into multi-robot coordination by robot tokenization!
 * [06/2026] Three paper got accepted by IEEE/RSJ IROS 2026! The acceptance rate drops to 36% this year. Congrats to Junhe Sheng, Jie Chen, and Yuteng Sun!
 * [05/2025] My first-authored paper about line-of-sight maintenance was selected as the ICRA 2025 Best Conference Paper Award Finalist.
 * [05/2025] I presented two papers about SLAM-aware exploration and line-of-sight maintenance at IEEE ICRA 2025 at Atlanta, USA.
@@ -112,7 +113,7 @@ Selected Projects
         <br>
         <em><b>Ruofei Bai</b>, J Chen, Y Cai, J Li, WY Yau, L Xie</em>
         <br>
-        Submitted to CoRL 2026. [<a href="https://arxiv.org/abs/2606.15550">Paper</a>] [<a href="https://bairuofei.github.io/roken-project-page/">Project</a>]
+        Accepted by CoRL 2026. [<a href="https://arxiv.org/abs/2606.15550">Paper</a>] [<a href="https://bairuofei.github.io/roken-project-page/">Project</a>]
     </div>
 </div>
 
