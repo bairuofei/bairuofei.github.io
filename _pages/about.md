@@ -94,6 +94,7 @@ My research has primarily focused on robot planning and coordination using gener
 
 Selected News
 ======
+* [10/2026] One paper got accepted by The International Journal of Robotics Research (IJRR)! Congrats to [Shaohao Zhu](https://scholar.google.com/citations?hl=zh-CN&user=2J_JIOkAAAAJ&view_op=list_works&sortby=pubdate) for the interesting work on multi-robot pre-training and reinforcement learning!
 * [09/2026] Two paper got accepted by CoRL 2026! My first attempt to introduce a distribution learning paradigm into multi-robot coordination by robot tokenization!
 * [06/2026] Three paper got accepted by IEEE/RSJ IROS 2026! The acceptance rate drops to 36% this year. Congrats to Junhe Sheng, Jie Chen, and Yuteng Sun!
 * [05/2025] My first-authored paper about line-of-sight maintenance was selected as the ICRA 2025 Best Conference Paper Award Finalist.
